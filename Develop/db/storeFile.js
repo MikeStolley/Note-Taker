@@ -10,7 +10,7 @@ class Store {
         return readFileSync("db/db.json", 'utf8')
     }
 
-    write() {
+    write(note) {
         return writeFileSync("db/db.json", JSON.stringify(note));
     }
 

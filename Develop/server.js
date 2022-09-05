@@ -1,10 +1,12 @@
 const express = require('express');
+
+const PORT = process.env.PORT || 3001;
+
+const app = express();
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
-const app = express();
 
-const PORT = process.env.PORT || 3001;
 
 // Use routes located in routes folder
 app.use('/api', apiRoutes);
@@ -15,7 +17,7 @@ app.use(express.static('public'));
 
 // parse, JSON requirement
 app.use(express.json());
-app.use(express.urlencoded({ encoded: true }));
+app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT, () => {
     console.log(`API server on port ${PORT}!`)
