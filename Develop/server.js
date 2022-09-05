@@ -15,7 +15,7 @@ app.use(express.static('public'));
 
 // parse, JSON requirement
 app.use(express.json());
-app.use(urlencoded({ encoded: true }));
+app.use(express.urlencoded({ encoded: true }));
 
 app.listen(PORT, () => {
     console.log(`API server on port ${PORT}!`)

@@ -1,7 +1,6 @@
 const util = require('util');
 const fs = require('fs');
 const uuid = require('uuid');
-const { throws } = require('assert');
 
 const readFileSync = util.promisify(fs.readFile);
 const writeFileSync = util.promisify(fs.writeFile);
