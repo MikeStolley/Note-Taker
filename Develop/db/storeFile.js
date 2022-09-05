@@ -7,7 +7,7 @@ const writeFileSync = util.promisify(fs.writeFile);
 
 class Store {
     read() {
-        return readFileSync("db/db.json", 'utf-8')
+        return readFileSync("db/db.json", 'utf8')
     }
 
     write() {
