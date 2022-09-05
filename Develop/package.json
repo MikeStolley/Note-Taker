@@ -11,5 +11,14 @@
   "dependencies": {
     "express": "^4.18.1",
     "uuid": "^8.3.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikeStolley/Note-Taker.git"
+  },
+  "keywords": [
+    "notes"
+  ],
+  "homepage": "https://github.com/MikeStolley/Note-Taker"
 }

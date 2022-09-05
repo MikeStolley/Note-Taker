@@ -5,7 +5,7 @@ const store = require('../db/storeFile');
 // GET request for notes
 router.get('/notes', (req, res) => {
     store
-    .getNote()
+    .getNotes()
     .then(notes => {
         res.json(notes)
     })
