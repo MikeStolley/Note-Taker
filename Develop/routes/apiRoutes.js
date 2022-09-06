@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const store = require('../db/storeFile');
 
 // GET request for notes
@@ -16,6 +15,7 @@ router.get('/notes', (req, res) => {
 
 // POST request for notes
 router.post('/notes', (req, res) => {
+    console.log(req.body);
     store
     .addNote(req.body)
     .then(note => {
