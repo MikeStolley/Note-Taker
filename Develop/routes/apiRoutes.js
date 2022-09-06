@@ -13,7 +13,7 @@ router.get('/notes', (req, res) => {
     })
 })
 
-// POST request for notes
+// POST for notes
 router.post('/notes', (req, res) => {
     console.log(req.body);
     store
@@ -24,6 +24,15 @@ router.post('/notes', (req, res) => {
     .catch(err => {
         res.status(500).json(err)
     })
+})
+
+// DELETE route for notes
+
+router.delete('/notes/:id', (req, res) => {
+    store
+    .deleteNote(req.params.id)
+    .then(() => res.json({ ok: true }))
+    .catch(err => res.status(500).json(err))
 })
 
 module.exports = router;
